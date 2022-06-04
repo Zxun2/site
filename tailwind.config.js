@@ -19,15 +19,8 @@ module.exports = {
       14: "3.5rem",
     },
     colors: {
-      dark: "#111826",
-      light: "#FFFFFF",
-      orange: "#F2BB16",
-      green: "#A5D936",
-      purple: "#B080F2",
-      pink: "#F277BB",
-      gray: {
-        850: "#18212F",
-      },
+      primary: colors.blue,
+      gray: colors.gray,
     },
     fontFamily: {
       sans: ["Inter", ...defaultTheme.fontFamily.sans],
