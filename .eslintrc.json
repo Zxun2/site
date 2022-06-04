@@ -1,3 +1,36 @@
 {
-  "extends": "next/core-web-vitals"
+  "root": true,
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "next/core-web-vitals"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": { "project": ["./tsconfig.json"] },
+  "plugins": ["@typescript-eslint"],
+  "rules": {
+    "@typescript-eslint/strict-boolean-expressions": [
+      2,
+      {
+        "allowString": false,
+        "allowNumber": false
+      }
+    ],
+    "no-var": "error",
+    "eqeqeq": ["error", "always", { "null": "ignore" }],
+    "react/jsx-curly-brace-presence": [
+      "error",
+      { "props": "never", "children": "always" }
+    ],
+    "curly": ["error", "multi-line"]
+  },
+  "ignorePatterns": ["src/**/*.test.ts", "src/frontend/generated/*"],
+  "overrides": [
+    {
+      "files": ["**/*.tsx"],
+      "rules": {
+        "react/prop-types": "off"
+      }
+    }
+  ]
 }
