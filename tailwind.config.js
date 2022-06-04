@@ -9,9 +9,6 @@ module.exports = {
   ],
   darkMode: "class",
   theme: {
-    spacing: {
-      "9/16": "56.25%",
-    },
     lineHeight: {
       11: "2.75rem",
       12: "3rem",
@@ -27,10 +24,6 @@ module.exports = {
       mono: ["JetBrains Mono", ...defaultTheme.fontFamily.mono],
     },
     extend: {
-      spacing: {
-        128: "32rem",
-        144: "36rem",
-      },
       borderRadius: {
         "4xl": "2rem",
       },

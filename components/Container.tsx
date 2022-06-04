@@ -1,9 +1,10 @@
 import Head from "next/head";
 import { useState, useEffect } from "react";
-import Meta from "./Meta";
+import Meta from "./metadata/Meta";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import { useRouter } from "next/router";
+import SEO from "./metadata/SEO";
 
 type ContainerProps = {
   children: any;
@@ -21,6 +22,7 @@ export default function Container(props: ContainerProps) {
   useEffect(() => setMounted(true), []);
 
   const { children, ...customMeta } = props;
+
   const meta = {
     title: "Zong xun",
     description: "developer, athelete, student",
@@ -28,22 +30,15 @@ export default function Container(props: ContainerProps) {
     ...customMeta,
   };
 
-  const padding = "md:p-0 sm:p-8 p-6";
-
   return (
     <div className="bg">
-      <Head>
-        <title>{meta.title}</title>
-        <Meta meta={meta} asPath={router.asPath} />
-      </Head>
+      <SEO title={props.title} meta={meta} asPath={router.asPath} />
       {/* <Navbar mounted={mounted} /> */}
       <Navbar />
-      <main
-        className={`contained flex flex-col justify-center max-w-2xl mx-auto ${padding} bg`}
-      >
+      <main className="container flex flex-col justify-center h-screen max-w-4xl mx-auto bg p-4 sm:p-8">
         {children}
-        <Footer />
       </main>
+      <Footer />
     </div>
   );
 }

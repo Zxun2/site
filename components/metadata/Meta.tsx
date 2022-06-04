@@ -6,7 +6,7 @@ type MetaProps = {
   asPath: string;
 };
 
-interface MetaValues {
+export interface MetaValues {
   description: string;
   title: string;
   image?: string;
