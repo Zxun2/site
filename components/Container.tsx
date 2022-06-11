@@ -1,7 +1,5 @@
-import Head from "next/head";
 import { useState, useEffect } from "react";
-import Meta from "./metadata/Meta";
-import Navbar from "./Navbar";
+import Navbar from "./navbar/Navbar";
 import Footer from "./Footer";
 import { useRouter } from "next/router";
 import SEO from "./metadata/SEO";
@@ -33,9 +31,8 @@ export default function Container(props: ContainerProps) {
   return (
     <div className="bg">
       <SEO title={props.title} meta={meta} asPath={router.asPath} />
-      {/* <Navbar mounted={mounted} /> */}
-      <Navbar />
-      <main className="container flex flex-col justify-center h-screen max-w-4xl mx-auto bg p-4 sm:p-8">
+      <Navbar mounted={mounted} />
+      <main className="container flex flex-col justify-center max-w-5xl mx-auto bg p-4 sm:p-8 prose text-dark dark:text-white">
         {children}
       </main>
       <Footer />
