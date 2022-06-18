@@ -4,8 +4,8 @@ import NavbarLink from "./NavbarLink";
 import ToggleDarkModeButton from "./toggleDarkModeButton";
 
 function Navbar({ mounted }: { mounted: boolean }) {
-  const sm = "sm:px-8 sm:py-8";
-  const xs = "px-6 py-8";
+  const sm = "sm:px-8 sm:py-4";
+  const xs = "px-6 py-4";
   const margin = "mx-auto my-0";
   const layout = "h-auto w-full max-w-5xl";
   const sticky = "sticky top-0 z-50";
