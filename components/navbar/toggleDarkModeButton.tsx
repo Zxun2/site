@@ -38,7 +38,7 @@ export default function ToggleDarkModeButton({
     <button
       aria-label="Toggle Dark Mode"
       type="button"
-      className="w-10 h-10 p-3 bg-gray-200 rounded dark:bg-gray-800"
+      className="w-10 h-10 p-3 bg-gray-200 rounded dark:bg-gray-600"
       onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
     >
       {mounted && <ToggleDarkModeIcon resolvedTheme={resolvedTheme} />}

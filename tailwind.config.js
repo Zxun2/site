@@ -66,11 +66,4 @@ module.exports = {
       addVariant("not-last", "&:not(:last-child)");
     },
   ],
-  // variants: {
-  //   fill: [],
-  //   extend: {
-  //     borderColor: ["focus-visible"],
-  //     opacity: ["disabled"],
-  //   },
-  // },
 };
