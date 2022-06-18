@@ -87,21 +87,21 @@ export default function Example() {
             <Tab.Panel
               key={idx}
               className={classNames(
-                "rounded-xl bg-gray-100 px-2",
+                "rounded-xl bg-gray-100 dark:bg-gray-700 ",
                 "ring-white ring-opacity-60 ring-offset-blue-400 focus:outline-none focus:ring-2"
               )}
             >
-              <ul>
+              <ul className="px-0">
                 {posts.map((post) => (
                   <li
                     key={post.id}
-                    className="relative rounded-md px-2 py-1 hover:bg-gray-100"
+                    className="relative rounded-md py-1 hover:bg-gray-200 dark:hover:bg-blue-300 list-none w-full"
                   >
-                    <h3 className="text-sm font-medium leading-5">
+                    <h3 className="px-5 text-sm font-medium leading-5">
                       {post.title}
                     </h3>
 
-                    <ul className="flex space-x-1 text-xs font-normal leading-4 text-gray-500">
+                    <ul className="list-none flex space-x-1 text-xs font-normal leading-4 text-gray-500 dark:text-gray-50">
                       <li>{post.date}</li>
                       <li>&middot;</li>
                       <li>{post.commentCount} comments</li>

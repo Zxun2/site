@@ -54,9 +54,15 @@ const Home: NextPage = () => {
           duration="August 9th, 2021 - June 10th, 2022"
         />
         <TimelineItem
+          title="Student"
+          description="Dean's List AY21/22 Sem 2"
+          organisation="National University of Singapore"
+          duration="August 9th, 2021 - Present"
+        />
+        <TimelineItem
           title="Underwater Combat Medic"
           description="Saving lives"
-          organisation="RSAF Navy"
+          organisation="RSAF NAVY"
           duration="May 4th, 2019 - May 4th, 2021"
         />
         <TimelineItem
