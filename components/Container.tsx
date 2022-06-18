@@ -32,7 +32,7 @@ export default function Container(props: ContainerProps) {
     <div className="bg">
       <SEO title={props.title} meta={meta} asPath={router.asPath} />
       <Navbar mounted={mounted} />
-      <main className="container flex flex-col justify-center max-w-5xl mx-auto bg p-4 sm:p-8 prose text-dark dark:text-white">
+      <main className="container flex flex-col justify-center max-w-5xl mx-auto bg p-8 prose text-dark dark:text-white">
         {children}
       </main>
       <Footer />

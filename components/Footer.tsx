@@ -5,15 +5,15 @@ import React from "react";
 
 function Footer() {
   const container =
-    "container flex justify-between items-center mx-auto max-w-5xl";
-  const sm = "sm:px-8 sm:py-8";
+    "container flex flex-col justify-between items-center mx-auto max-w-5xl";
+  const sm = "sm:flex-row sm:px-8 sm:py-8";
   const xs = "px-6 py-8";
 
   return (
     <footer className="p-4 dark:bg-gray-800 text-gray-800">
       <div className={`${container} ${sm} ${xs}  md:flex md:justify-between`}>
         <Link href="/">
-          <div className="flex-grow self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
+          <div className="flex flex-grow mb-7 sm:mb-0 self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
             Zong Xun
           </div>
         </Link>
