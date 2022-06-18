@@ -10,12 +10,42 @@
   }
 }
 
-@layer base {
-  h1 {
-    @apply text-4xl;
-  }
-  h2 {
-    @apply text-3xl;
-  }
-  /* ... */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply tracking-tight font-bold text-black dark:text-white;
+}
+
+h1 {
+  @apply text-3xl md:text-5xl;
+}
+
+h2 {
+  @apply text-2xl md:text-4xl;
+}
+
+h3 {
+  @apply text-xl md:text-3xl;
+}
+
+h4 {
+  @apply font-semibold text-lg md:text-2xl;
+}
+
+h5 {
+  @apply font-semibold text-base md:text-xl;
+}
+
+h6 {
+  @apply font-semibold text-base md:text-lg;
+}
+
+p,
+.paragraph {
+  @apply prose
+  text-gray-600
+  dark:text-gray-300;
 }

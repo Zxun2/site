@@ -1,12 +1,10 @@
 import Container from "@/components/Container";
 import type { NextPage } from "next";
-import Head from "next/head";
-import Image from "next/image";
 import Link from "next/link";
 
 const Home: NextPage = () => {
   return (
-    <Container title={"Hello!"} description={"Home Page"}>
+    <Container title={"hello | Zong xun"} description={"Home Page"}>
       <h1 className="font-bold mb-4 text-dark dark:text-white">
         Hey, I'm Zong Xun 👋🏼
       </h1>
