@@ -74,9 +74,10 @@ const map: Record<string, string> = {
 };
 
 const Cheatsheets: NextPage<Props> = ({ subjects, count }) => {
+  console.log(subjects, count);
   return (
     <Container title={'Cheatsheets | Zong xun'} description={'Blog Page'}>
-      <div className="mb-4 flex items-center justify-between">
+      <div className="mb-4 flex flex-col sm:flex-row items-center justify-between">
         <h1 className="mb-0">Cheatsheet 🙂</h1>
         <div className="flex items-center gap-2">
           <p>{count.stars}</p>
@@ -90,6 +91,7 @@ const Cheatsheets: NextPage<Props> = ({ subjects, count }) => {
       <div className="grid gap-5 grid-cols-2">
         {subjects.map((item) => (
           <Feature
+            key={item.path}
             title={item.path}
             href={`https://github.com/Zxun2/cheatsheets/tree/main/${item.path}`}
             subtitle={map[item.path]}
