@@ -123,7 +123,7 @@ const Projects: NextPage = () => {
       <div className="text-center">
         <h1>Projects 📽️</h1>
       </div>
-      <div className="grid gap-5 grid-cols-2">
+      <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
         {data.map((item) => (
           <Feature
             description={item.description}
@@ -138,7 +138,7 @@ const Projects: NextPage = () => {
       <div className="text-center">
         <h1>Open Source Contributions</h1>
       </div>
-      <div className="grid gap-5 grid-cols-2">
+      <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
         {oss.map((item) => (
           <Feature
             description={item.description}
