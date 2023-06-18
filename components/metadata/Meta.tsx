@@ -1,5 +1,4 @@
 import React from 'react';
-import NextRouter from 'next/router';
 
 type MetaProps = {
   meta: MetaValues;
@@ -26,9 +25,7 @@ function Meta({ meta, asPath }: MetaProps) {
       <meta property="og:description" content={meta.description} />
       <meta property="og:title" content={meta.title} />
       <meta property="og:image" content={meta.image} />
-      {meta.date && (
-        <meta property="article:published_time" content={meta.date} />
-      )}
+      <meta property="article:published_time" content={meta.date ?? ''} />
     </>
   );
 }

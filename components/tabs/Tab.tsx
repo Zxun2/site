@@ -6,7 +6,7 @@ function classNames(...classes: string[]) {
 }
 
 export default function Example() {
-  let [categories] = useState({
+  const [categories] = useState({
     Projects: [
       {
         id: 1,

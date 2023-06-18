@@ -106,9 +106,9 @@ export function Feature({
         <h6 className="text-gray-600 text-sm font-light inset-0 italic">
           {subtitle ?? ''}
         </h6>
-        <p className={'text-sm'}>{description ?? ''}</p>
+        <p className="text-sm">{description ?? ''}</p>
         {tags &&
-          tags!.map((tag, idx) => (
+          tags!.map((tag) => (
             <span
               key={randomUUID()}
               className="inline-grid bg-blue-100 text-blue-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800"
@@ -123,9 +123,9 @@ export function Feature({
 
 const Projects: NextPage = () => {
   return (
-    <Container title={'Projects | Zong xun'} description={'Projects Page'}>
+    <Container title="Projects | Zong xun" description="Projects Page">
       <div className="text-center">
-        <h1>Projects 📽️</h1>
+        <h1>{'Projects 📽️'}</h1>
       </div>
       <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
         {data.map((item) => (
@@ -141,7 +141,7 @@ const Projects: NextPage = () => {
       </div>
       <hr />
       <div className="text-center">
-        <h1>Open Source Contributions</h1>
+        <h1>{'Open Source Contributions'}</h1>
       </div>
       <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
         {oss.map((item) => (

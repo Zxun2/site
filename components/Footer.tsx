@@ -14,13 +14,13 @@ function Footer() {
       <div className={`${container} ${sm} ${xs}  md:flex md:justify-between`}>
         <Link href="/">
           <div className="flex flex-grow mb-7 sm:mb-0 self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-            Zong Xun
+            {"Zong Xun\r"}
           </div>
         </Link>
         <div className="grid grid-cols-3 gap-8 sm:gap-6 sm:grid-cols-3">
           <div className="self-center">
             <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
-              Social
+              {"Social\r"}
             </h2>
             <ul className="text-gray-600 dark:text-gray-400">
               <li className="mb-4">
@@ -30,7 +30,7 @@ function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Github
+                  {"Github\r"}
                 </a>
               </li>
               <li className="">
@@ -40,41 +40,41 @@ function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  LinkedIn
+                  {"LinkedIn\r"}
                 </a>
               </li>
             </ul>
           </div>
           <div className="self-center">
             <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
-              About Me
+              {"About Me\r"}
             </h2>
             <ul className="text-gray-600 dark:text-gray-400">
               <li className="mb-4">
                 <Link href="/about" className="hover:underline ">
-                  About
+                  {"About\r"}
                 </Link>
               </li>
               <li>
                 <Link href="/uses" className="hover:underline">
-                  Uses
+                  {"Uses\r"}
                 </Link>
               </li>
             </ul>
           </div>
           <div className="self-center">
             <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
-              Resources
+              {"Resources\r"}
             </h2>
             <ul className="text-gray-600 dark:text-gray-400">
               <li className="mb-4">
                 <Link href="/cheatsheets" className="hover:underline">
-                  Cheatsheets
+                  {"Cheatsheets\r"}
                 </Link>
               </li>
               <li>
                 <Link href="/snippets" className="hover:underline">
-                  Snippets
+                  {"Snippets\r"}
                 </Link>
               </li>
             </ul>
@@ -84,11 +84,11 @@ function Footer() {
       <div className={`${container} ${sm} ${xs} flex`}>
         <div className="sm:flex sm:items-center sm:justify-between">
           <span className="text-sm text-gray-900 sm:text-center dark:text-gray-400">
-            © 2023
+            {"© 2023\r"}
             <Link href="/" className="hover:underline">
-              Lee Zong Xun
+              {"Lee Zong Xun\r"}
             </Link>
-            . All Rights Reserved.
+            {". All Rights Reserved.\r"}
           </span>
         </div>
         <div className="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
