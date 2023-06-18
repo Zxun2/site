@@ -3,7 +3,7 @@ import type { NextPage } from 'next';
 import { Feature } from './projects';
 import { StarFillIcon, RepoForkedIcon, EyeIcon } from '@primer/octicons-react';
 
-export async function getServerSideProps() {
+async function fetcher() {
   try {
     const apiUrl = 'https://api.github.com/repos/Zxun2/cheatsheets';
     const treeUrl = `${apiUrl}/git/trees/main`;
@@ -19,13 +19,11 @@ export async function getServerSideProps() {
     );
 
     return {
-      props: {
-        subjects,
-        count: {
-          stars: repoResponse?.stargazers_count,
-          forks: repoResponse?.forks_count,
-          watchers: repoResponse?.subscribers_count,
-        },
+      subjects,
+      count: {
+        stars: repoResponse?.stargazers_count,
+        forks: repoResponse?.forks_count,
+        watchers: repoResponse?.subscribers_count,
       },
     };
   } catch (error) {
@@ -74,22 +72,21 @@ const map: Record<string, string> = {
 };
 
 const Cheatsheets: NextPage<Props> = ({ subjects, count }) => {
-  console.log(subjects, count);
   return (
     <Container title={'Cheatsheets | Zong xun'} description={'Blog Page'}>
       <div className="mb-4 flex flex-col sm:flex-row items-center justify-between">
         <h1 className="mb-0">Cheatsheet 🙂</h1>
         <div className="flex items-center gap-2">
-          <p>{count.stars}</p>
+          <p>{count?.stars}</p>
           <StarFillIcon size={16} fill="#eac54f" />
-          <p>{count.forks}</p>
+          <p>{count?.forks}</p>
           <RepoForkedIcon size={16} />
-          <p>{count.watchers}</p>
+          <p>{count?.watchers}</p>
           <EyeIcon size={16} />
         </div>
       </div>
       <div className="grid gap-5 grid-cols-2">
-        {subjects.map((item) => (
+        {subjects?.map((item) => (
           <Feature
             key={item.path}
             title={item.path}

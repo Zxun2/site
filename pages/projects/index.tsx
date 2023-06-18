@@ -1,5 +1,6 @@
 import Container from '@/components/Container';
 import clsx from 'clsx';
+import { randomUUID } from 'crypto';
 import type { NextPage } from 'next';
 import Link from 'next/link';
 import { ComponentProps, ReactNode } from 'react';
@@ -109,7 +110,7 @@ export function Feature({
         {tags &&
           tags!.map((tag, idx) => (
             <span
-              key={idx}
+              key={randomUUID()}
               className="inline-grid bg-blue-100 text-blue-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800"
             >
               {tag}
