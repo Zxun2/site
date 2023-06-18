@@ -3,7 +3,7 @@ import type { NextPage } from 'next';
 import { Feature } from './projects';
 import { StarFillIcon, RepoForkedIcon, EyeIcon } from '@primer/octicons-react';
 
-async function fetcher() {
+export async function getServerSideProps() {
   try {
     const apiUrl = 'https://api.github.com/repos/Zxun2/cheatsheets';
     const treeUrl = `${apiUrl}/git/trees/main`;
