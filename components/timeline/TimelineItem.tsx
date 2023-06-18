@@ -1,4 +1,3 @@
-import { randomUUID } from 'crypto';
 import React from 'react';
 
 type Props = {
@@ -48,8 +47,8 @@ const TimelineItem = ({
           <>
             <p>{description?.title}</p>
             <ul>
-              {description?.body.map((item) => (
-                <li key={randomUUID()}>{item}</li>
+              {description?.body.map((item, idx) => (
+                <li key={item}>{item}</li>
               ))}
             </ul>
           </>
