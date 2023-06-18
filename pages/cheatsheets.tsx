@@ -19,11 +19,13 @@ export async function getServerSideProps() {
     );
 
     return {
-      subjects,
-      count: {
-        stars: repoResponse?.stargazers_count,
-        forks: repoResponse?.forks_count,
-        watchers: repoResponse?.subscribers_count,
+      props: {
+        subjects,
+        count: {
+          stars: repoResponse?.stargazers_count,
+          forks: repoResponse?.forks_count,
+          watchers: repoResponse?.subscribers_count,
+        },
       },
     };
   } catch (error) {
