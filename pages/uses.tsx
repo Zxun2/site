@@ -1,15 +1,15 @@
-import Container from "@/components/Container";
-import type { NextPage } from "next";
-import Link from "next/link";
+import Container from '@/components/Container';
+import type { NextPage } from 'next';
+import Link from 'next/link';
 
-const Projects: NextPage = () => {
+const Blog: NextPage = () => {
   return (
-    <Container title={"projects | Zong xun"} description={"Projects Page"}>
+    <Container title={'Uses | Zong xun'} description={'Blog Page'}>
       <div className="text-center">
         <h1>Site under construction 👷‍♂️</h1>
         <p className="mx-auto">This page is coming soon!</p>
         <p className="mx-auto">
-          Stay tuned for the 2022 refresh of my website! In the meantime, you
+          Stay tuned for the 2024 refresh of my website! In the meantime, you
           can contact me through the following:
         </p>
         <div className="flex justify-between w-48 m-auto">
@@ -41,4 +41,4 @@ const Projects: NextPage = () => {
   );
 };
 
-export default Projects;
+export default Blog;

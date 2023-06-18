@@ -1,16 +1,16 @@
-import Container from "@/components/Container";
-import type { NextPage } from "next";
+import Container from '@/components/Container';
+import type { NextPage } from 'next';
 
 const About: NextPage = () => {
   return (
-    <Container title={"about me | Zong xun"} description={"About Page"}>
+    <Container title={'About me | Zong xun'} description={'About Page'}>
       <div className="flex flex-col items-center  ">
         <div
           className="w-48 h-48 rounded-full bg-center bg-cover"
-          style={{ backgroundImage: "url(/avatar.png)" }}
+          style={{ backgroundImage: 'url(/avatar.png)' }}
         />
         <h3>Lee Zong Xun</h3>
-        <p className="lighter mx-auto">Computer Science and Mathematics, NUS</p>
+        <p className="lighter mx-auto">Computer Science and Statistics, NUS</p>
       </div>
       <p className="mx-auto text-justify">
         I am a believer in the power of fundamentals. I love working with

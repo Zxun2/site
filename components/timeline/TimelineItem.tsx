@@ -1,9 +1,9 @@
-import React from "react";
+import React from 'react';
 
 type Props = {
   title: string;
   organisation: string;
-  description: string;
+  description: string | { title?: string; body: string[] };
   duration: string;
 };
 
@@ -22,11 +22,11 @@ const TimelineItem = ({
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
-          stroke-width="2"
+          strokeWidth="2"
         >
           <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeLinecap="round"
+            strokeLinejoin="round"
             d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
           />
         </svg>
@@ -41,7 +41,18 @@ const TimelineItem = ({
         {duration}
       </time>
       <p className="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
-        {description}
+        {typeof description === 'string' ? (
+          description
+        ) : (
+          <>
+            <p>{description?.title}</p>
+            <ul>
+              {description?.body.map((item) => (
+                <li>{item}</li>
+              ))}
+            </ul>
+          </>
+        )}
       </p>
     </li>
   );

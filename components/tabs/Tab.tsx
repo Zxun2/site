@@ -1,8 +1,8 @@
-import { useState } from "react";
-import { Tab } from "@headlessui/react";
+import { useState } from 'react';
+import { Tab } from '@headlessui/react';
 
 function classNames(...classes: string[]) {
-  return classes.filter(Boolean).join(" ");
+  return classes.filter(Boolean).join(' ');
 }
 
 export default function Example() {
@@ -10,54 +10,40 @@ export default function Example() {
     Projects: [
       {
         id: 1,
-        title: "Does drinking coffee make you smarter?",
-        date: "5h ago",
-        commentCount: 5,
-        shareCount: 2,
+        title: 'Polyrhythms in Music',
+        date: '2023/06/01',
       },
       {
         id: 2,
-        title: "So you've bought coffee... now what?",
-        date: "2h ago",
-        commentCount: 3,
-        shareCount: 2,
+        title: 'FriendlyLink',
+        date: '2023/04/10',
       },
       {
         id: 3,
         title: "So you've bought coffee... now what?",
-        date: "2h ago",
-        commentCount: 3,
-        shareCount: 2,
+        date: '2h ago',
       },
       {
         id: 4,
         title: "So you've bought coffee... now what?",
-        date: "2h ago",
-        commentCount: 3,
-        shareCount: 2,
+        date: '2h ago',
       },
       {
         id: 5,
         title: "So you've bought coffee... now what?",
-        date: "2h ago",
-        commentCount: 3,
-        shareCount: 2,
+        date: '2h ago',
       },
     ],
     Blogs: [
       {
         id: 1,
-        title: "Is tech making coffee better or worse?",
-        date: "Jan 7",
-        commentCount: 29,
-        shareCount: 16,
+        title: 'Is tech making coffee better or worse?',
+        date: 'Jan 7',
       },
       {
         id: 2,
-        title: "The most innovative things happening in coffee",
-        date: "Mar 19",
-        commentCount: 24,
-        shareCount: 12,
+        title: 'The most innovative things happening in coffee',
+        date: 'Mar 19',
       },
     ],
   });
@@ -71,10 +57,10 @@ export default function Example() {
               key={category}
               className={({ selected }: { selected: boolean }) =>
                 classNames(
-                  "inline-block p-2 border-b border-transparent",
+                  'inline-block p-2 border-b border-transparent',
                   selected
-                    ? "text-blue-600 hover:text-blue-600 dark:text-blue-500 dark:hover:text-blue-500 border-blue-600"
-                    : "text-gray-500 hover:text-gray-600              dark:text-gray-400 border-gray-100              dark:border-gray-700 dark:hover:text-gray-300"
+                    ? 'text-blue-600 hover:text-blue-600 dark:text-blue-500 dark:hover:text-blue-500 border-blue-600'
+                    : 'text-gray-500 hover:text-gray-600 dark:text-gray-400 border-gray-100 dark:border-gray-700 dark:hover:text-gray-300'
                 )
               }
             >
@@ -87,8 +73,8 @@ export default function Example() {
             <Tab.Panel
               key={idx}
               className={classNames(
-                "rounded-xl bg-gray-100 dark:bg-gray-700 ",
-                "ring-white ring-opacity-60 ring-offset-blue-400 focus:outline-none focus:ring-2"
+                'rounded-xl bg-gray-100 dark:bg-gray-700 ',
+                'ring-white ring-opacity-60 ring-offset-blue-400 focus:outline-none focus:ring-2'
               )}
             >
               <ul className="px-0">
@@ -103,17 +89,13 @@ export default function Example() {
 
                     <ul className="list-none flex space-x-1 text-xs font-normal leading-4 text-gray-500 dark:text-gray-50">
                       <li>{post.date}</li>
-                      <li>&middot;</li>
-                      <li>{post.commentCount} comments</li>
-                      <li>&middot;</li>
-                      <li>{post.shareCount} shares</li>
                     </ul>
 
                     <a
                       href="#"
                       className={classNames(
-                        "absolute inset-0 rounded-md",
-                        "ring-blue-400 focus:z-10 focus:outline-none focus:ring-2"
+                        'absolute inset-0 rounded-md',
+                        'ring-blue-400 focus:z-10 focus:outline-none focus:ring-2'
                       )}
                     />
                   </li>

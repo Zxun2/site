@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 const Blog: NextPage = () => {
   return (
-    <Container title={'blog | Zong xun'} description={'Blog Page'}>
+    <Container title={'Snippets | Zong xun'} description={'Blog Page'}>
       <div className="text-center">
         <h1>Site under construction 👷‍♂️</h1>
         <p className="mx-auto">This page is coming soon!</p>

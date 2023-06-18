@@ -1,13 +1,13 @@
-import Link from "next/link";
-import React from "react";
+import Link from 'next/link';
+import React from 'react';
 
 // https://stackoverflow.com/questions/65632698/how-to-open-a-link-in-a-new-tab-in-nextjs
 
 function Footer() {
   const container =
-    "container flex flex-col justify-between items-center mx-auto max-w-5xl";
-  const sm = "sm:flex-row sm:px-8 sm:py-8";
-  const xs = "px-6 py-8";
+    'container flex flex-col justify-between items-center mx-auto max-w-5xl';
+  const sm = 'sm:flex-row sm:px-8 sm:py-8';
+  const xs = 'px-6 py-8';
 
   return (
     <footer className="p-4 dark:bg-gray-800 text-gray-800">
@@ -84,7 +84,7 @@ function Footer() {
       <div className={`${container} ${sm} ${xs} flex`}>
         <div className="sm:flex sm:items-center sm:justify-between">
           <span className="text-sm text-gray-900 sm:text-center dark:text-gray-400">
-            © 2022{" "}
+            © 2023
             <Link href="/" className="hover:underline">
               Lee Zong Xun
             </Link>

@@ -1,5 +1,5 @@
-import React from "react";
-import NextRouter from "next/router";
+import React from 'react';
+import NextRouter from 'next/router';
 
 type MetaProps = {
   meta: MetaValues;
@@ -19,8 +19,8 @@ function Meta({ meta, asPath }: MetaProps) {
     <>
       <meta name="robots" content="follow, index" />
       <meta content={meta.description} name="description" />
-      <meta property="og:url" content={`https://leezx.com${asPath}`} />
-      <link rel="canonical" href={`https://leezx.com${asPath}`} />
+      <meta property="og:url" content={`https://lzongxun.dev${asPath}`} />
+      <link rel="canonical" href={`https://lzongxun.dev${asPath}`} />
       <meta property="og:type" content={meta.type} />
       <meta property="og:site_name" content="Zong xun" />
       <meta property="og:description" content={meta.description} />
