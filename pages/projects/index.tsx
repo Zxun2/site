@@ -103,12 +103,15 @@ export function Feature({
       >
         <h4 className="font-bold mt-0">{title}</h4>
         <h6 className="text-gray-600 text-sm font-light inset-0 italic">
-          {subtitle}
+          {subtitle ?? ''}
         </h6>
-        <p className={'text-sm'}>{description}</p>
+        <p className={'text-sm'}>{description ?? ''}</p>
         {tags &&
-          tags!.map((tag) => (
-            <span className="inline-grid bg-blue-100 text-blue-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800">
+          tags!.map((tag, idx) => (
+            <span
+              id={idx.toString()}
+              className="inline-grid bg-blue-100 text-blue-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800"
+            >
               {tag}
             </span>
           ))}
@@ -126,6 +129,7 @@ const Projects: NextPage = () => {
       <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
         {data.map((item) => (
           <Feature
+            key={item.title}
             description={item.description}
             subtitle={item.subtitle}
             title={item.title}
@@ -141,6 +145,7 @@ const Projects: NextPage = () => {
       <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
         {oss.map((item) => (
           <Feature
+            key={item.title}
             description={item.description}
             subtitle={item.subtitle}
             title={item.title}
