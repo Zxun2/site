@@ -3,6 +3,7 @@ import { data as projects, oss } from '@/data/index';
 import clsx from 'clsx';
 import type { NextPage } from 'next';
 import Link from 'next/link';
+import { ButtonToTop } from 'pages';
 import { ComponentProps, ReactNode } from 'react';
 
 interface FeatureProps extends Omit<ComponentProps<'div'>, 'title'> {
@@ -84,6 +85,7 @@ const Projects: NextPage = () => {
           />
         ))}
       </div>
+      <ButtonToTop />
     </Container>
   );
 };

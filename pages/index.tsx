@@ -3,6 +3,24 @@ import Timeline from '@/components/timeline/Timeline';
 import TimelineItem from '@/components/timeline/TimelineItem';
 import type { NextPage } from 'next';
 import Link from 'next/link';
+import { ArrowUpIcon } from '@primer/octicons-react';
+
+export const ButtonToTop = () => {
+  return (
+    <div className="mt-3 self-end flex items-center p-2 border-2 border-blue-700 dark:border-blue-300 rounded-md">
+      <button
+        className="text-blue-700 dark:text-blue-300 border-2 border-none"
+        onClick={() => {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }}
+      >
+        {'Back to top\r'}
+
+        <ArrowUpIcon size={20} className="text-blue-700 dark:text-blue-300" />
+      </button>
+    </div>
+  );
+};
 
 const Home: NextPage = () => {
   return (
@@ -54,32 +72,43 @@ const Home: NextPage = () => {
       <Timeline>
         <TimelineItem
           title="Full Stack Software Engineer"
-          description="React, TypeScript, PostgreSQL"
+          description="Internal Tooling Team (Artificial Intelligence)"
           organisation="Expensify, Sans Francisco, USA"
           duration="Aug 9th, 2023 - Present"
         />
         <TimelineItem
           title="Full Stack Software Engineer"
-          description="Golang, gRPC, Flask, Tensorflow"
+          description="Optimizing Performance with Golang and gRPC"
           organisation="Seer AI, Singapore"
           duration="Dec 9th, 2022 - Feb 1st, 2023"
         />
         <TimelineItem
           title="Full Stack Software Engineer"
-          description="Golang, React, PostgreSQL, Ruby on Rails, Redux"
+          description="Security, Access Control, Policy Management, Dashboard"
           organisation="Computing for Voluntary Welfare Organisations, Singapore"
           duration="May 9th, 2022 - Aug 5th, 2022"
         />
         <TimelineItem
           title="Computer Science Student"
-          description={{
-            title: 'A proud member of',
-            body: [
-              'NUS Developer Student Club',
-              'NUS Fintech Society',
-              'NUS SoC TIPs',
-            ],
-          }}
+          description={[
+            {
+              title: 'A member of',
+              body: [
+                'NUS Developer Student Club',
+                'NUS Fintech Society',
+                'NUS SoC TIPs',
+                'NUS OSS',
+              ],
+            },
+            {
+              title: 'Teaching Assistant for',
+              body: [
+                'CS2103/T (Software Engineering)',
+                'CS2109s (Introduction to Artificial Intelligence and Machine Learning)',
+                'CS2040s (Data Structures and Algorithms)',
+              ],
+            },
+          ]}
           organisation="National University of Singapore"
           duration="August 9th, 2021 - Present"
         />
@@ -93,22 +122,12 @@ const Home: NextPage = () => {
           </div>
         </Link>
         <Link href="/projects">
-          <div className="inline-flex w-auto items-center py-2 px-4 text-sm font-medium text-gray-900 bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-200 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-100 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700">
+          <div className=" inline-flex w-auto items-center py-2 px-4 text-sm font-medium text-gray-900 bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-200 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-100 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700">
             {'Check out my projects\r'}
           </div>
         </Link>
       </div>
-      {/* <Example /> */}
-      <div className="mt-3 self-end">
-        <button
-          className="underline text-blue-700 dark:text-blue-300 border-2 border-none"
-          onClick={() => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-          }}
-        >
-          {'Back to top\r'}
-        </button>
-      </div>
+      <ButtonToTop />
     </Container>
   );
 };

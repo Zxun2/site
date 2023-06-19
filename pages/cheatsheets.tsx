@@ -2,6 +2,7 @@ import Container from '@/components/Container';
 import type { NextPage } from 'next';
 import { Feature } from './projects';
 import { StarFillIcon, RepoForkedIcon, EyeIcon } from '@primer/octicons-react';
+import { ButtonToTop } from 'pages';
 
 export async function getServerSideProps() {
   try {
@@ -76,16 +77,22 @@ const map: Record<string, string> = {
 const Cheatsheets: NextPage<Props> = ({ subjects, count }) => {
   return (
     <Container title="Cheatsheets" description="Blog Page">
-      <div className="mb-4 flex flex-col sm:flex-row items-center justify-between">
-        <h1 className="mb-0">{'Cheatsheet 🙂'}</h1>
-        <div className="flex items-center gap-2">
-          <p>{count?.stars}</p>
-          <StarFillIcon size={16} fill="#eac54f" />
-          <p>{count?.forks}</p>
-          <RepoForkedIcon size={16} />
-          <p>{count?.watchers}</p>
-          <EyeIcon size={16} />
+      <div className="mb-4">
+        <div className="flex flex-col sm:flex-row items-center justify-between">
+          <h1 className="mb-0">{'Cheatsheet 🙂'}</h1>
+          <div className="flex items-center gap-2">
+            <p>{count?.stars}</p>
+            <StarFillIcon size={16} fill="#eac54f" />
+            <p>{count?.forks}</p>
+            <RepoForkedIcon size={16} />
+            <p>{count?.watchers}</p>
+            <EyeIcon size={16} />
+          </div>
         </div>
+        <p>
+          {"A compilation of cheatsheets for NUS Computer Science (and Statistics)\r"}
+          {"curriculum.\r"}
+        </p>
       </div>
       <div className="grid gap-5 grid-cols-2">
         {subjects?.map((item) => (
@@ -97,6 +104,7 @@ const Cheatsheets: NextPage<Props> = ({ subjects, count }) => {
           />
         ))}
       </div>
+      <ButtonToTop />
     </Container>
   );
 };

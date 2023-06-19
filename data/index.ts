@@ -1,6 +1,6 @@
 export const data = [
   {
-    title: 'Personal Website',
+    title: 'Personal Website 💻',
     subtitle: 'My Personal Site!',
     description:
       "This website is built with Next.js and Tailwind CSS. It's deployed on Vercel and the source code is available on GitHub. I also use TypeScript for type safety and ESLint for linting. I'm also using Framer Motion for animations and react-icons for icons.",

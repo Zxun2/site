@@ -1,9 +1,11 @@
 import React from 'react';
 
+type TitleWithBody = { title?: string; body: string[] };
+
 type Props = {
   title: string;
   organisation: string;
-  description: string | { title?: string; body: string[] };
+  description: string | TitleWithBody[];
   duration: string;
 };
 
@@ -41,18 +43,18 @@ const TimelineItem = ({
         {duration}
       </time>
       <p className="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
-        {typeof description === 'string' ? (
-          description
-        ) : (
-          <>
-            <p>{description?.title}</p>
-            <ul>
-              {description?.body.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-          </>
-        )}
+        {typeof description === 'string'
+          ? description
+          : description.map((itm) => (
+              <>
+                <p>{itm?.title}</p>
+                <ul>
+                  {itm?.body.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
+              </>
+            ))}
       </p>
     </li>
   );
