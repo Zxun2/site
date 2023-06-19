@@ -3,11 +3,19 @@ import Timeline from '@/components/timeline/Timeline';
 import TimelineItem from '@/components/timeline/TimelineItem';
 import type { NextPage } from 'next';
 import Link from 'next/link';
-import { ArrowUpIcon } from '@primer/octicons-react';
+import {
+  ArrowUpIcon,
+  ChevronDownIcon,
+  ChevronUpIcon,
+  FoldDownIcon,
+  SidebarCollapseIcon,
+} from '@primer/octicons-react';
+import Contact from '@/components/Contact';
+import { useState } from 'react';
 
 export const ButtonToTop = () => {
   return (
-    <div className="mt-3 self-end flex items-center p-2 border-2 border-blue-700 dark:border-blue-300 rounded-md">
+    <div className="mt-3 self-end flex items-center px-2 py-1 border-2 border-blue-700 dark:border-blue-300 rounded-md">
       <button
         className="text-blue-700 dark:text-blue-300 border-2 border-none"
         onClick={() => {
@@ -23,6 +31,7 @@ export const ButtonToTop = () => {
 };
 
 const Home: NextPage = () => {
+  const [open, setOpen] = useState(false);
   return (
     <Container title="Home" description="Home Page">
       <h1 className="font-bold mb-4 text-dark dark:text-white">
@@ -38,7 +47,7 @@ const Home: NextPage = () => {
         {'using.\r'}
       </p>
       <p>{'Welcome to my personal slice of the internet'}</p>
-      <div className="flex gap-1">
+      <div className="flex">
         <Link href="/about">
           <a className="inline-flex w-auto items-center py-2 px-4 text-sm font-medium text-gray-900 bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-200 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-100 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700">
             {'Learn more about me\r'}
@@ -56,63 +65,71 @@ const Home: NextPage = () => {
             </svg>
           </a>
         </Link>
-
-        <a
-          target="_blank"
-          href="https://cal.com/zongxun"
-          rel="noopener noreferrer"
-          className="transition-all inline-flex w-auto items-center py-2 px-4 text-sm font-medium bg-blue-700 text-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-200 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-white dark:focus:ring-1"
-        >
-          {'Contact me\r'}
-        </a>
+        <Contact />
       </div>
       <br />
       <hr />
-      <h2>{'Timeline'}</h2>
+      <div className="flex items-center gap-4">
+        <h2 className="m-0">{'Timeline'}</h2>
+      </div>
       <Timeline>
         <TimelineItem
           title="Full Stack Software Engineer"
           description="Internal Tooling Team (Artificial Intelligence)"
-          organisation="Expensify, Sans Francisco, USA"
+          organisation="Expensify, New York, US"
           duration="Aug 9th, 2023 - Present"
         />
-        <TimelineItem
-          title="Full Stack Software Engineer"
-          description="Optimizing Performance with Golang and gRPC"
-          organisation="Seer AI, Singapore"
-          duration="Dec 9th, 2022 - Feb 1st, 2023"
-        />
-        <TimelineItem
-          title="Full Stack Software Engineer"
-          description="Security, Access Control, Policy Management, Dashboard"
-          organisation="Computing for Voluntary Welfare Organisations, Singapore"
-          duration="May 9th, 2022 - Aug 5th, 2022"
-        />
-        <TimelineItem
-          title="Computer Science Student"
-          description={[
-            {
-              title: 'A member of',
-              body: [
-                'NUS Developer Student Club',
-                'NUS Fintech Society',
-                'NUS SoC TIPs',
-                'NUS OSS',
-              ],
-            },
-            {
-              title: 'Teaching Assistant for',
-              body: [
-                'CS2103/T (Software Engineering)',
-                'CS2109s (Introduction to Artificial Intelligence and Machine Learning)',
-                'CS2040s (Data Structures and Algorithms)',
-              ],
-            },
-          ]}
-          organisation="National University of Singapore"
-          duration="August 9th, 2021 - Present"
-        />
+        {open && (
+          <>
+            <TimelineItem
+              title="Full Stack Software Engineer"
+              description="Optimizing Performance with Golang and gRPC"
+              organisation="Seer AI, Singapore"
+              duration="Dec 9th, 2022 - Feb 1st, 2023"
+            />
+            <TimelineItem
+              title="Full Stack Software Engineer"
+              description="Security, Access Control, Policy Management, Dashboard"
+              organisation="Computing for Voluntary Welfare Organisations, Singapore"
+              duration="May 9th, 2022 - Aug 5th, 2022"
+            />
+            <TimelineItem
+              title="Computer Science Student"
+              description={[
+                {
+                  title: 'A member of',
+                  body: [
+                    'NUS Developer Student Club',
+                    'NUS Fintech Society',
+                    'NUS SoC TIPs',
+                    'NUS OSS',
+                  ],
+                },
+                {
+                  title: 'Teaching Assistant for',
+                  body: [
+                    'CS2103/T (Software Engineering)',
+                    'CS2109s (Introduction to Artificial Intelligence and Machine Learning)',
+                    'CS2040s (Data Structures and Algorithms)',
+                  ],
+                },
+              ]}
+              organisation="National University of Singapore"
+              duration="August 9th, 2021 - Present"
+            />
+          </>
+        )}
       </Timeline>
+      <button onClick={() => setOpen((prev) => !prev)}>
+        {!open ? (
+          <div className="flex gap-1 items-center justify-center">
+            <p>{"Show more"}</p>
+            <ChevronDownIcon size={20} />
+          </div>
+        ) : (
+          <ChevronUpIcon size={20} />
+        )}
+      </button>
       <hr />
 
       <div className="flex gap-4 justify-center">

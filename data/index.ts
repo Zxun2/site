@@ -1,3 +1,6 @@
+import { GithubIcon, LinkedInIcon } from '@/components/Footer';
+import { CalendarIcon } from '@primer/octicons-react';
+
 export const data = [
   {
     title: 'Personal Website 💻',
@@ -66,5 +69,23 @@ export const oss = [
       'cpy3 is a C++ library for Python 3 C API. It provides a C++ wrapper for Python 3 C API and allows you to write Python extension modules in C++.',
     tags: ['C++', 'Python'],
     href: 'https://github.com/go-python/cpy3',
+  },
+];
+
+export const socials = [
+  {
+    name: 'Book a meeting with me',
+    href: 'https://cal.com/zongxun',
+    icon: CalendarIcon,
+  },
+  {
+    name: 'Connect with me on LinkedIn',
+    href: 'https://www.linkedin.com/in/lzongxun',
+    icon: LinkedInIcon,
+  },
+  {
+    name: 'Follow me on Github',
+    href: 'https://github.com/Zxun2',
+    icon: GithubIcon,
   },
 ];
