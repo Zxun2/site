@@ -47,7 +47,7 @@ const TimelineItem = ({
           <>
             <p>{description?.title}</p>
             <ul>
-              {description?.body.map((item, idx) => (
+              {description?.body.map((item) => (
                 <li key={item}>{item}</li>
               ))}
             </ul>
