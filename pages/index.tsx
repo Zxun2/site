@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 const Home: NextPage = () => {
   return (
-    <Container title="Home | Zong Xun" description="Home Page">
+    <Container title="Home" description="Home Page">
       <h1 className="font-bold mb-4 text-dark dark:text-white">
         {"Hey, I'm Zong Xun 👋🏼\r"}
       </h1>

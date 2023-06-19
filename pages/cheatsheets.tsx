@@ -75,9 +75,9 @@ const map: Record<string, string> = {
 
 const Cheatsheets: NextPage<Props> = ({ subjects, count }) => {
   return (
-    <Container title="Cheatsheets | Zong xun" description="Blog Page">
+    <Container title="Cheatsheets" description="Blog Page">
       <div className="mb-4 flex flex-col sm:flex-row items-center justify-between">
-        <h1 className="mb-0">{"Cheatsheet 🙂"}</h1>
+        <h1 className="mb-0">{'Cheatsheet 🙂'}</h1>
         <div className="flex items-center gap-2">
           <p>{count?.stars}</p>
           <StarFillIcon size={16} fill="#eac54f" />

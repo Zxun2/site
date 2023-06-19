@@ -3,7 +3,7 @@ import type { NextPage } from 'next';
 
 const Blog: NextPage = () => {
   return (
-    <Container title="Uses | Zong xun" description="Blog Page">
+    <Container title="Uses" description="Uses Page">
       <div className="text-center">
         <h1>{'Site under construction 👷‍♂️'}</h1>
         <p className="mx-auto">{'This page is coming soon!'}</p>
