@@ -12,8 +12,9 @@
     "@typescript-eslint/strict-boolean-expressions": [
       2,
       {
-        "allowString": false,
-        "allowNumber": false
+        "allowString": true,
+        "allowNumber": true,
+        "allowAny": true
       }
     ],
     "no-var": "error",

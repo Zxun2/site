@@ -4,7 +4,6 @@ import readingTime from 'reading-time';
 import { serialize } from 'next-mdx-remote/serialize';
 import { MdxSource, FrontMatter, BlogProps } from '../types/index';
 import fs from 'fs';
-import rehypeHighlight from 'rehype-highlight';
 
 export const root: string = process.cwd();
 

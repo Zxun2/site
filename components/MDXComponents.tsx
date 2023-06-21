@@ -9,7 +9,9 @@ export type LinkProps = {
 };
 
 const Link = ({ href, children, className }: LinkProps) => {
-  const isInternal = href && (href.startsWith('/') || href.startsWith('#'));
+  const isInternal = href
+    ? href.startsWith('/') || href.startsWith('#')
+    : false;
   return isInternal ? (
     <NextLink href={href}>
       <a className={className}>{children}</a>
@@ -70,7 +72,7 @@ const Kbd = ({ children }: any) => {
       <kbd style={style}>{parts.shift()}</kbd>
       {parts.map((d: string, i: number) => (
         <React.Fragment key={i}>
-          <span style={span}>+</span>
+          <span style={span}>{'+'}</span>
           <kbd style={style}>{d}</kbd>
         </React.Fragment>
       ))}

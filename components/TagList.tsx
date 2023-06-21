@@ -1,7 +1,13 @@
 import { useEffect } from 'react';
 import { freqObj } from 'utils';
 
-const TagList = ({ allTags, activeTags, setActiveTags }: any) => {
+type Props = {
+  allTags: string[];
+  activeTags: string[];
+  setActiveTags: (tags: string[]) => void;
+};
+
+const TagList = ({ allTags, activeTags, setActiveTags }: Props) => {
   useEffect(() => {
     console.log(allTags, activeTags);
   }, [allTags, activeTags]);
@@ -48,7 +54,7 @@ const TagList = ({ allTags, activeTags, setActiveTags }: any) => {
           onClick={handleClear}
           className="rounded-md py-1 px-2 mx-1 text-blue-500 no-underline  dark:text-blue-100"
         >
-          clear
+          {'clear\r'}
         </a>
       </div>
     </div>

@@ -44,10 +44,10 @@ const Home: NextPage = () => {
         />
       </div>
       <p className="mb-2 mt-1">
-        I'm a self-proclaimed efficiency enthusiast who loves dabbling in both
-        coding and sports. When I'm not busy crafting my own applications,
-        you'll likely find me joyfully reverse-engineering some other intriguing
-        ones!
+        {"I'm a self-proclaimed efficiency enthusiast who loves dabbling in both\r"}
+        {"coding and sports. When I'm not busy crafting my own applications,\r"}
+        {"you'll likely find me joyfully reverse-engineering some other intriguing\r"}
+        {"ones!\r"}
       </p>
       <p>{'Welcome to my personal slice of the internet.'}</p>
       <div className="flex">
