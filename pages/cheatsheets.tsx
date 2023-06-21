@@ -1,10 +1,35 @@
 import Container from '@/components/Container';
-import type { NextPage } from 'next';
+import type { GetServerSideProps, InferGetServerSidePropsType } from 'next';
 import { Feature } from './projects';
 import { StarFillIcon, RepoForkedIcon, EyeIcon } from '@primer/octicons-react';
 import { ButtonToTop } from 'pages';
 
-export async function getServerSideProps() {
+type Blob = {
+  path: string;
+  mode: string;
+  type: string;
+  sha: string;
+  url: string;
+  size?: number;
+};
+
+interface Props {
+  subjects: Blob[];
+  count: {
+    stars: number;
+    forks: number;
+    watchers: number;
+  };
+}
+
+export const getServerSideProps: GetServerSideProps<Props> = async ({
+  res,
+}) => {
+  res.setHeader(
+    'Cache-Control',
+    'public, s-maxage=10, stale-while-revalidate=59'
+  );
+
   try {
     const apiUrl = 'https://api.github.com/repos/Zxun2/cheatsheets';
     const treeUrl = `${apiUrl}/git/trees/main`;
@@ -42,25 +67,7 @@ export async function getServerSideProps() {
       },
     };
   }
-}
-
-type Blob = {
-  path: string;
-  mode: string;
-  type: string;
-  sha: string;
-  url: string;
-  size?: number;
 };
-
-interface Props {
-  subjects: Blob[];
-  count: {
-    stars: number;
-    forks: number;
-    watchers: number;
-  };
-}
 
 const map: Record<string, string> = {
   CS2109s: 'Introduction to Machine Learning and Artificial Intelligence',
@@ -74,12 +81,23 @@ const map: Record<string, string> = {
   CS2030s: 'Programming Methodology II',
 };
 
-const Cheatsheets: NextPage<Props> = ({ subjects, count }) => {
+const Cheatsheets = ({
+  subjects,
+  count,
+}: InferGetServerSidePropsType<typeof getServerSideProps>) => {
   return (
     <Container title="Cheatsheets" description="Blog Page">
       <div className="mb-4">
         <div className="flex flex-col sm:flex-row items-center justify-between">
-          <h1 className="mb-0">{'Cheatsheet 🙂'}</h1>
+          <div className="flex items-center gap-2">
+            <h1 className="mb-0">{'Cheatsheet'}</h1>
+            <img
+              src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Smiling%20Face%20with%20Sunglasses.png"
+              alt="Smiling Face with Sunglasses"
+              width="35"
+              height="35"
+            />
+          </div>
           <div className="flex items-center gap-2">
             <p>{count?.stars}</p>
             <StarFillIcon size={16} fill="#eac54f" />
@@ -90,8 +108,10 @@ const Cheatsheets: NextPage<Props> = ({ subjects, count }) => {
           </div>
         </div>
         <p>
-          {"A compilation of cheatsheets for NUS Computer Science (and Statistics)\r"}
-          {"curriculum.\r"}
+          {
+            'A compilation of cheatsheets for NUS Computer Science (and Statistics)\r'
+          }
+          {'curriculum.\r'}
         </p>
       </div>
       <div className="grid gap-5 grid-cols-2">

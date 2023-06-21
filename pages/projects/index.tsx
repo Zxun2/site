@@ -54,8 +54,16 @@ export function Feature({
 const Projects: NextPage = () => {
   return (
     <Container title="Projects" description="Projects Page">
-      <div className="text-center">
-        <h1>{'Projects 📽️'}</h1>
+      <div className="flex justify-center">
+        <div className="flex items-center gap-2">
+          <h1 className="m-0">{'Projects'}</h1>
+          <img
+            src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Camera%20with%20Flash.png"
+            alt="Camera with Flash"
+            width="45"
+            height="45"
+          />
+        </div>
       </div>
       <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
         {projects.map((item) => (

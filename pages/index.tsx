@@ -7,8 +7,6 @@ import {
   ArrowUpIcon,
   ChevronDownIcon,
   ChevronUpIcon,
-  FoldDownIcon,
-  SidebarCollapseIcon,
 } from '@primer/octicons-react';
 import Contact from '@/components/Contact';
 import { useState } from 'react';
@@ -34,19 +32,24 @@ const Home: NextPage = () => {
   const [open, setOpen] = useState(false);
   return (
     <Container title="Home" description="Home Page">
-      <h1 className="font-bold mb-4 text-dark dark:text-white">
-        {"Hey, I'm Zong Xun 👋🏼\r"}
-      </h1>
-      <p className="mb-5 mt-4">
-        {
-          "I'm an efficiency junkie who also happens to write code and do sports. I\r"
-        }
-        {
-          "love using vim and I believe that it's too fast to afford not to learn\r"
-        }
-        {'using.\r'}
+      <div className="flex items-center mb-1 gap-2">
+        <h1 className="font-bold text-dark m-0 dark:text-white">
+          {"Hey, I'm Zong Xun"}
+        </h1>
+        <img
+          src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Hand%20gestures/Waving%20Hand%20Light%20Skin%20Tone.png"
+          alt="Waving Hand Light Skin Tone"
+          width="40"
+          height="40"
+        />
+      </div>
+      <p className="mb-2 mt-1">
+        I'm a self-proclaimed efficiency enthusiast who loves dabbling in both
+        coding and sports. When I'm not busy crafting my own applications,
+        you'll likely find me joyfully reverse-engineering some other intriguing
+        ones!
       </p>
-      <p>{'Welcome to my personal slice of the internet'}</p>
+      <p>{'Welcome to my personal slice of the internet.'}</p>
       <div className="flex">
         <Link href="/about">
           <a className="inline-flex w-auto items-center py-2 px-4 text-sm font-medium text-gray-900 bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-200 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-100 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700">
@@ -79,6 +82,7 @@ const Home: NextPage = () => {
           organisation="Expensify, New York, US"
           duration="Aug 9th, 2023 - Present"
         />
+
         {open && (
           <>
             <TimelineItem
@@ -123,7 +127,7 @@ const Home: NextPage = () => {
       <button onClick={() => setOpen((prev) => !prev)}>
         {!open ? (
           <div className="flex gap-1 items-center justify-center">
-            <p>{"Show more"}</p>
+            <p>{'Show more'}</p>
             <ChevronDownIcon size={20} />
           </div>
         ) : (
