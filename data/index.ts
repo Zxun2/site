@@ -3,6 +3,21 @@ import { CalendarIcon } from '@primer/octicons-react';
 
 export const data = [
   {
+    title: 'Monkey Interpreter',
+    subtitle: 'An Interpreter written in Golang',
+    description: 'Coming soon.',
+    href: '/',
+    tags: ['Golang', 'Interpreter'],
+  },
+  {
+    title: 'PyRegex',
+    subtitle: 'Regular Expression Engine in Python',
+    description:
+      'A RegEx Parser employing Top-Down Recursive Descent Parsing (TDRDP) and a RegEx Matcher utilizing backtracking. Achieved a fully functional engine encompassing essential features such as grouping, curly brace quantification, range element, and lookaheads.',
+    href: 'https://github.com/Zxun2/pyregex',
+    tags: ['Python', 'TDD', 'Regex'],
+  },
+  {
     title: 'Personal Website 💻',
     subtitle: 'My Personal Site!',
     description:

@@ -28,7 +28,7 @@ export function Feature({
       <div
         className={clsx(
           className,
-          'p-5 border-2 border-solid border-gray-100 rounded-md bg-white  dark:bg-gray-800 dark:text-gray-100 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 hover:bg-gray-100 hover:text-blue-700'
+          'p-5 border-2 border-solid border-gray-900 rounded-md bg-white dark:bg-gray-800 dark:text-gray-100 dark:border-gray-600 dark:hover:text-white  dark:hover:bg-gray-700 hover:bg-gray-100 hover:text-blue-700'
         )}
         {...props}
       >
