@@ -3,11 +3,7 @@ import Timeline from '@/components/timeline/Timeline';
 import TimelineItem from '@/components/timeline/TimelineItem';
 import type { NextPage } from 'next';
 import Link from 'next/link';
-import {
-  ArrowUpIcon,
-  ChevronDownIcon,
-  ChevronUpIcon,
-} from '@primer/octicons-react';
+import { ArrowUpIcon, ChevronDownIcon, ChevronUpIcon } from '@primer/octicons-react';
 import Contact from '@/components/Contact';
 import { useState } from 'react';
 
@@ -29,13 +25,11 @@ export const ButtonToTop = () => {
 };
 
 const Home: NextPage = () => {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(true);
   return (
     <Container title="Home" description="Home Page">
       <div className="flex items-center mb-1 gap-2">
-        <h1 className="font-bold text-dark m-0 dark:text-white">
-          {"Hey, I'm Zong Xun"}
-        </h1>
+        <h1 className="font-bold text-dark m-0 dark:text-white">{"Hey, I'm Zong Xun"}</h1>
         <img
           src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Hand%20gestures/Waving%20Hand%20Light%20Skin%20Tone.png"
           alt="Waving Hand Light Skin Tone"
@@ -47,19 +41,14 @@ const Home: NextPage = () => {
         {"I'm a self-proclaimed efficiency enthusiast who loves dabbling in both\r"}
         {"coding and sports. When I'm not busy crafting my own applications,\r"}
         {"you'll likely find me joyfully reverse-engineering some other intriguing\r"}
-        {"ones!\r"}
+        {'ones!\r'}
       </p>
       <p>{'Welcome to my personal slice of the internet.'}</p>
       <div className="flex">
         <Link href="/about">
           <a className="inline-flex w-auto items-center py-2 px-4 text-sm font-medium text-gray-900 bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-200 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-100 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700">
             {'Learn more about me\r'}
-            <svg
-              className="ml-2 w-3 h-3"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
-            >
+            <svg className="ml-2 w-3 h-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
               <path
                 fillRule="evenodd"
                 d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
@@ -76,13 +65,6 @@ const Home: NextPage = () => {
         <h2 className="m-0">{'Timeline'}</h2>
       </div>
       <Timeline>
-        <TimelineItem
-          title="Full Stack Software Engineer"
-          description="Internal Tooling Team (Artificial Intelligence)"
-          organisation="Expensify, New York, US"
-          duration="Aug 9th, 2023 - Present"
-        />
-
         {open && (
           <>
             <TimelineItem
@@ -102,19 +84,14 @@ const Home: NextPage = () => {
               description={[
                 {
                   title: 'A member of',
-                  body: [
-                    'NUS Developer Student Club',
-                    'NUS Fintech Society',
-                    'NUS SoC TIPs',
-                    'NUS OSS',
-                  ],
+                  body: ['NUS Developer Student Club', 'NUS Fintech Society', 'NUS SoC TIPs', 'NUS OSS'],
                 },
                 {
                   title: 'Teaching Assistant for',
                   body: [
-                    'CS2103/T (Software Engineering)',
-                    'CS2109s (Introduction to Artificial Intelligence and Machine Learning)',
-                    'CS2040s (Data Structures and Algorithms)',
+                    'CS2103/T (Software Engineering) - AY23/24 Semester 2',
+                    'CS2109s (Introduction to Artificial Intelligence and Machine Learning) - AY22/23 Semester 2',
+                    'CS2040s (Data Structures and Algorithms) - AY21/22 Semester 1',
                   ],
                 },
               ]}

@@ -1,5 +1,3 @@
-import path from 'path';
-import fs from 'fs';
 import { BlogProps } from '../types/index';
 
 export const getAllTags = (posts: BlogProps[]): string[] => {

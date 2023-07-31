@@ -3,11 +3,11 @@ import { CalendarIcon } from '@primer/octicons-react';
 
 export const data = [
   {
-    title: 'Monkey Interpreter',
-    subtitle: 'An Interpreter written in Golang',
-    description: 'Coming soon.',
-    href: '/',
-    tags: ['Golang', 'Interpreter'],
+    title: 'TypeTypeGo',
+    subtitle: 'A TypeRacer clone, but better.',
+    description: 'A multiplayer typing game built with Flutter and Socket.io.',
+    href: 'https://typetypego.web.app',
+    tags: ['Flutter', 'Dart', 'MongoDB', 'Websockets'],
   },
   {
     title: 'PyRegex',
@@ -62,8 +62,7 @@ export const data = [
 export const oss = [
   {
     title: 'TEAMMATES',
-    subtitle:
-      'Student peer evaluations/feedback, shareable instructor comments, and more...',
+    subtitle: 'Student peer evaluations/feedback, shareable instructor comments, and more...',
     description:
       'TEAMMATES is a free online tool for managing peer evaluations and other feedback paths of your students. It is provided as a cloud-based service for educators/students and is currently used by hundreds of universities across the world.',
     tags: ['Angular', 'TypeScript', 'Java'],

@@ -14,15 +14,7 @@ interface FeatureProps extends Omit<ComponentProps<'div'>, 'title'> {
   href?: string;
 }
 
-export function Feature({
-  title,
-  subtitle,
-  description,
-  tags,
-  href,
-  className,
-  ...props
-}: FeatureProps) {
+export function Feature({ title, subtitle, description, tags, href, className, ...props }: FeatureProps) {
   return (
     <Link href={href!}>
       <div
@@ -33,9 +25,7 @@ export function Feature({
         {...props}
       >
         <h4 className="font-bold mt-0">{title}</h4>
-        <h6 className="text-gray-600 text-sm font-light inset-0 italic">
-          {subtitle ?? ''}
-        </h6>
+        <h6 className="text-gray-600 text-sm font-light inset-0 italic">{subtitle ?? ''}</h6>
         <p className="text-sm">{description ?? ''}</p>
         {tags &&
           tags!.map((tag, idx) => (
