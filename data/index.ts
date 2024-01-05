@@ -84,6 +84,14 @@ export const oss = [
     tags: ['C++', 'Python'],
     href: 'https://github.com/go-python/cpy3',
   },
+  {
+    title: 'jupyterlab-git',
+    subtitle: 'Extension for JupyterLab',
+    description:
+      'An extension for JupyterLab which allows you to stage, commit and push your notebooks to GitHub. It also allows you to view a diff of your changes.',
+    tags: ['Typescript', 'Python'],
+    href: 'https://github.com/jupyterlab/jupyterlab-git',
+  },
 ];
 
 export const socials = [

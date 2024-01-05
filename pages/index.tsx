@@ -62,41 +62,40 @@ const Home: NextPage = () => {
       <br />
       <hr />
       <div className="flex items-center gap-4">
-        <h2 className="m-0">{'Timeline'}</h2>
+        <h2 className="m-0">{'Experiences'}</h2>
       </div>
       <Timeline>
+        <TimelineItem
+          title="Software Engineer Intern"
+          description="Trust and Safety Team"
+          organisation="Tiktok, Singapore"
+          duration="Jan 15th, 2024 - Present"
+        />
         {open && (
           <>
             <TimelineItem
-              title="Full Stack Software Engineer"
+              title="MLH Fellow"
+              description="Open Source Contributions to Jupyterlab"
+              organisation="Jupyterlab, Canada"
+              duration="Aug 18th, 2023 - Dec 8th, 2023"
+            />
+            <TimelineItem
+              title="Software Engineer Intern"
+              description="Migration to V2, Cache Optimization"
+              organisation="Expensify, New York City, USA"
+              duration="May 8th, 2022 - Aug 25th, 2023"
+            />
+            <TimelineItem
+              title="Software Engineer Intern"
               description="Optimizing Performance with Golang and gRPC"
               organisation="Seer AI, Singapore"
               duration="Dec 9th, 2022 - Feb 1st, 2023"
             />
             <TimelineItem
-              title="Full Stack Software Engineer"
+              title="Software Engineer Intern"
               description="Security, Access Control, Policy Management, Dashboard"
               organisation="Computing for Voluntary Welfare Organisations, Singapore"
               duration="May 9th, 2022 - Aug 5th, 2022"
-            />
-            <TimelineItem
-              title="Computer Science Student"
-              description={[
-                {
-                  title: 'A member of',
-                  body: ['NUS Developer Student Club', 'NUS Fintech Society', 'NUS SoC TIPs', 'NUS OSS'],
-                },
-                {
-                  title: 'Teaching Assistant for',
-                  body: [
-                    'CS2103/T (Software Engineering) - AY23/24 Semester 2',
-                    'CS2109s (Introduction to Artificial Intelligence and Machine Learning) - AY22/23 Semester 2',
-                    'CS2040s (Data Structures and Algorithms) - AY21/22 Semester 1',
-                  ],
-                },
-              ]}
-              organisation="National University of Singapore"
-              duration="August 9th, 2021 - Present"
             />
           </>
         )}
@@ -111,6 +110,38 @@ const Home: NextPage = () => {
           <ChevronUpIcon size={20} />
         )}
       </button>
+
+      <div className="flex items-center gap-4">
+        <h2 className="m-0">{'Education'}</h2>
+      </div>
+      <Timeline>
+        <TimelineItem
+          title="Computer Science Student"
+          description={[
+            {
+              title: 'A member of',
+              body: [
+                'NUS Developer Student Club',
+                'NUS Fintech Society',
+                'NUS SoC TIPs',
+                'NUS OSS',
+                'GIC Computing for Community Fellowship',
+                'MLH Fellowship',
+              ],
+            },
+            {
+              title: 'Teaching Assistant for',
+              body: [
+                'CS2103/T (Software Engineering) - AY23/24 Semester 2',
+                'CS2109s (Introduction to Artificial Intelligence and Machine Learning) - AY22/23 Semester 2',
+                'CS2040s (Data Structures and Algorithms) - AY21/22 Semester 1',
+              ],
+            },
+          ]}
+          organisation="National University of Singapore"
+          duration="August 9th, 2021 - Present"
+        />
+      </Timeline>
       <hr />
 
       <div className="flex gap-4 justify-center">
