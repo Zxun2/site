@@ -9,12 +9,7 @@ type Props = {
   duration: string;
 };
 
-const TimelineItem = ({
-  title,
-  organisation,
-  description,
-  duration,
-}: Props) => {
+const TimelineItem = ({ title, organisation, description, duration }: Props) => {
   return (
     <li className="mb-10 ml-6">
       <span className="flex absolute -left-3 justify-center items-center w-6 h-6 bg-gray-100 rounded-full ring-white dark:ring-gray-900 dark:bg-gray-800">
@@ -39,9 +34,7 @@ const TimelineItem = ({
           {organisation}
         </span>
       </h3>
-      <time className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
-        {duration}
-      </time>
+      <time className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">{duration}</time>
       <p className="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
         {typeof description === 'string'
           ? description

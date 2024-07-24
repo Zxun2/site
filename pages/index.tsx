@@ -67,15 +67,19 @@ const Home: NextPage = () => {
       <Timeline>
         <TimelineItem
           title="Software Engineer Intern"
-          description="Trust and Safety Team"
+          description="
+            Currently in Global Payments (Product), previously from
+            Trust & Safety (Infrastructure) and 
+            Trust & Safety (Product)
+          "
           organisation="Tiktok, Singapore"
           duration="Jan 15th, 2024 - Present"
         />
         {open && (
           <>
             <TimelineItem
-              title="MLH Fellow"
-              description="Open Source Contributions to Jupyterlab"
+              title="Software Engineer Intern"
+              description="Worked on jupyterlab-git and jupyterlab-variableinspector extensions"
               organisation="Jupyterlab, Canada"
               duration="Aug 18th, 2023 - Dec 8th, 2023"
             />
@@ -116,6 +120,7 @@ const Home: NextPage = () => {
       </div>
       <Timeline>
         <TimelineItem
+          key={0}
           title="Computer Science Student"
           description={[
             {
@@ -127,14 +132,19 @@ const Home: NextPage = () => {
                 'NUS OSS',
                 'GIC Computing for Community Fellowship',
                 'MLH Fellowship',
+                'CoPhi Research Group',
               ],
             },
             {
               title: 'Teaching Assistant for',
               body: [
-                'CS2103/T (Software Engineering) - AY23/24 Semester 2',
-                'CS2109s (Introduction to Artificial Intelligence and Machine Learning) - AY22/23 Semester 2',
-                'CS2040s (Data Structures and Algorithms) - AY21/22 Semester 1',
+                'CS4248 (Natural Language Processing)',
+                'CS2103/T (Software Engineering)',
+                'CS2109s (Introduction to Artificial Intelligence and Machine Learning)',
+                'CS2040s (Data Structures and Algorithms)',
+                'CS1231s (Discrete Structures)',
+                'CS2030s (Programming Methodology II)',
+                'CS1101s (Programming Methodology)',
               ],
             },
           ]}

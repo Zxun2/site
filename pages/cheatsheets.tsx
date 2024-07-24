@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import Container from '@/components/Container';
 import type { GetServerSideProps, InferGetServerSidePropsType } from 'next';
 import { Feature } from './projects';
@@ -22,13 +23,8 @@ interface Props {
   };
 }
 
-export const getServerSideProps: GetServerSideProps<Props> = async ({
-  res,
-}) => {
-  res.setHeader(
-    'Cache-Control',
-    'public, s-maxage=10, stale-while-revalidate=59'
-  );
+export const getServerSideProps: GetServerSideProps<Props> = async ({ res }) => {
+  res.setHeader('Cache-Control', 'public, s-maxage=10, stale-while-revalidate=59');
 
   try {
     const apiUrl = 'https://api.github.com/repos/Zxun2/cheatsheets';
@@ -40,9 +36,7 @@ export const getServerSideProps: GetServerSideProps<Props> = async ({
       fetch(apiUrl, { method: 'GET', headers }).then((res) => res.json()),
     ]);
 
-    const subjects = treeResponse?.tree?.filter(
-      (subject: Blob) => !('size' in subject)
-    );
+    const subjects = treeResponse?.tree?.filter((subject: Blob) => !('size' in subject));
 
     return {
       props: {
@@ -79,12 +73,14 @@ const map: Record<string, string> = {
   ST2137: 'Computer Aided Data Analysis',
   CS2040s: 'Data Structures and Algorithms',
   CS2030s: 'Programming Methodology II',
+  CS350: 'Operating Systems',
+  SE464: 'Software Engineering Principles and Patterns',
+  STAT333: 'Stochastic Processes',
+  STAT331: 'Regression Analysis',
+  STAT330: 'Mathematical Statistics',
 };
 
-const Cheatsheets = ({
-  subjects,
-  count,
-}: InferGetServerSidePropsType<typeof getServerSideProps>) => {
+const Cheatsheets = ({ subjects, count }: InferGetServerSidePropsType<typeof getServerSideProps>) => {
   return (
     <Container title="Cheatsheets" description="Blog Page">
       <div className="mb-4">
@@ -108,9 +104,7 @@ const Cheatsheets = ({
           </div>
         </div>
         <p>
-          {
-            'A compilation of cheatsheets for NUS Computer Science (and Statistics)\r'
-          }
+          {'A compilation of cheatsheets for NUS Computer Science (and Statistics)\r'}
           {'curriculum.\r'}
         </p>
       </div>
