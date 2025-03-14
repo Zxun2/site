@@ -66,17 +66,19 @@ const Home: NextPage = () => {
       </div>
       <Timeline>
         <TimelineItem
-          title="Software Engineer Intern"
-          description="
-            Currently in Global Payments (Product), previously from
-            Trust & Safety (Infrastructure) and 
-            Trust & Safety (Product)
-          "
-          organisation="Tiktok, Singapore"
-          duration="Jan 15th, 2024 - Present"
+          title="Quantitative Developer (Python)"
+          description="Middle Office"
+          organisation="Qube Research & Technologies, Hong Kong"
+          duration="May 15th, 2025 - Present"
         />
         {open && (
           <>
+            <TimelineItem
+              title="Software Engineer Intern"
+              description="Buy-Now-Pay-Later (BNPL) and C-Wallet"
+              organisation="Tiktok, Singapore"
+              duration="Jan 15th, 2024 - Dec 16th 2024"
+            />
             <TimelineItem
               title="Software Engineer Intern"
               description="Worked on jupyterlab-git and jupyterlab-variableinspector extensions"
@@ -86,7 +88,7 @@ const Home: NextPage = () => {
             <TimelineItem
               title="Software Engineer Intern"
               description="Migration to V2, Cache Optimization"
-              organisation="Expensify, New York City, USA"
+              organisation="Expensify, United States"
               duration="May 8th, 2022 - Aug 25th, 2023"
             />
             <TimelineItem
