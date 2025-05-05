@@ -66,10 +66,10 @@ const Home: NextPage = () => {
       </div>
       <Timeline>
         <TimelineItem
-          title="Quantitative Developer (Python)"
-          description="Middle Office"
+          title="Quantitative Developer"
+          description="Front Office"
           organisation="Qube Research & Technologies, Hong Kong"
-          duration="May 15th, 2025 - Present"
+          duration="May 12th, 2025 - Present"
         />
         {open && (
           <>
@@ -77,7 +77,13 @@ const Home: NextPage = () => {
               title="Software Engineer Intern"
               description="Buy-Now-Pay-Later (BNPL) and C-Wallet"
               organisation="Tiktok, Singapore"
-              duration="Jan 15th, 2024 - Dec 16th 2024"
+              duration="Aug 21th, 2024 - Dec 16th 2024"
+            />
+            <TimelineItem
+              title="Software Engineer Intern"
+              description="Trust & Safety, Product Infrastructure"
+              organisation="Tiktok, Singapore"
+              duration="Jan 15th, 2024 - Aug 21th, 2024"
             />
             <TimelineItem
               title="Software Engineer Intern"
